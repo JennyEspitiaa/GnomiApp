@@ -8,7 +8,7 @@ export const fotoReducers = (state = initialState, action) => {
     switch (action.type) {
         case typesFoto.list:
             return{
-                fotosNuevas:[action.payload]
+                fotosNuevas:[...action.payload]
             }
     
         default:

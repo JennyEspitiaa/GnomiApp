@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore"
+import { addDoc, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from 'firebase/firestore'
 import { DatosBase } from "../../firebase/firebaseConfig"
 import { typesFoto } from "../types/types"
 
@@ -31,10 +31,10 @@ export const addFotoSync = (formValue) => {
 export const listFotosAsync = () =>{
     return async(dispatch)=>{
 
-        const ListarFotos = await getDocs(collection(DatosBase, "Fotos"))
-        console.log(ListarFotos)
+        const listarFotos = await getDocs(collection(DatosBase, "fotosUser"))
+        console.log(listarFotos)
         const Foticos = []
-        ListarFotos.forEach(pintar =>{
+        listarFotos.forEach(pintar =>{
             Foticos.push(
                 {
                     ...pintar.data()

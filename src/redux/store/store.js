@@ -7,7 +7,7 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 
 const reducers = combineReducers({
     login: registerReducers,
-    fotoReducers: fotoReducers
+    fotoReducersListar: fotoReducers
 })
 
 export const store = createStore(

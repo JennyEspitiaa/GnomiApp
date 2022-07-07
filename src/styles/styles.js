@@ -457,11 +457,11 @@ margin-top: 20px;
 
 export const GalleryDiv = styled.div` 
   display:grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 25% 25% 25% 25%;
   width: 80%;
   margin: 0 auto;
-  gap:20px;
   margin-top: 2%;
+  padding: 20px;
 `
 
 export const GalleryTittle = styled.p` 
@@ -485,11 +485,17 @@ export const PhotoWhere = styled.p`
   display:flex;
   gap:12px;
   align-items: center;
+  width: 90%;
+  margin:0 auto;
+  margin-bottom: 10px;
 `
 
 export const PhotoPic = styled.img` 
-  width: 100%;
+  width: 350px;
+  height: 200px;
   border-radius: 10px;
+  display: flex;
+  margin:0 auto;
 `
 
 export const DivComment = styled.div` 
@@ -497,11 +503,14 @@ export const DivComment = styled.div`
   align-items: center;
   gap:20px;
   padding: 10px;
+  height: 100px;
 `
 
 export const DivDel = styled.div` 
   display:flex;
   justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
 `
 
 export const Delete = styled.p` 

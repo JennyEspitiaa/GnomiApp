@@ -7,7 +7,7 @@ import Weather from './Weather';
 
 const Home = () => {
 
-  let apiWeather = "https://api.openweathermap.org/data/2.5/weather?appid=0a1360ecdc8b3ca3e8f963217f2cd479&lang=es"
+   let apiWeather = "https://api.openweathermap.org/data/2.5/weather?appid=0a1360ecdc8b3ca3e8f963217f2cd479&lang=es"
   let ciudadUrl = "&q="
 
   let pronosticoUrl = "https://api.openweathermap.org/data/2.5/forecast?appid=0a1360ecdc8b3ca3e8f963217f2cd479&lang=es"
