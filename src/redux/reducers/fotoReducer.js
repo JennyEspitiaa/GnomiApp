@@ -10,6 +10,10 @@ export const fotoReducers = (state = initialState, action) => {
             return{
                 fotosNuevas:[...action.payload]
             }
+            case typesFoto.edit:
+                return{
+                   ...state
+                }
     
         default:
             return state

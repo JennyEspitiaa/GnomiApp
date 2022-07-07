@@ -491,7 +491,7 @@ export const PhotoWhere = styled.p`
 `
 
 export const PhotoPic = styled.img` 
-  width: 350px;
+  width: 280px;
   height: 200px;
   border-radius: 10px;
   display: flex;
@@ -501,7 +501,6 @@ export const PhotoPic = styled.img`
 export const DivComment = styled.div` 
   display:flex;
   align-items: center;
-  gap:20px;
   padding: 10px;
   height: 100px;
 `
@@ -511,6 +510,15 @@ export const DivDel = styled.div`
   justify-content: space-between;
   width: 85%;
   margin: 0 auto;
+`
+
+export const Edit = styled.p`
+font-size: 12px;
+  color:white;
+  cursor: pointer;
+  &:hover{
+    color:#226cc3;
+  }
 `
 
 export const Delete = styled.p` 
@@ -537,9 +545,10 @@ border:2px solid rgb(34, 108, 195)
 `
 
 export const PhotoPrg = styled.p` 
-  font-size:14px;
+  font-size:12px;
   margin: 0 auto;
   color:#525252;
+  width:82%;
 `
 
 export const CrearTitle = styled.p` 

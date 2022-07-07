@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { listFotosAsync } from '../redux/actions/actionFotos';
-import { Delete, DivComment, DivDel, GalleryDiv, GalleryTittle, LocationIcon, PhotoDiv, PhotoPic, PhotoPrg, PhotoWhere, UserName, UserPic } from '../styles/styles'
+import { deleteFotoAsync, listFotosAsync } from '../redux/actions/actionFotos';
+import { Delete, DivComment, DivDel, Edit, GalleryDiv, GalleryTittle, LocationIcon, PhotoDiv, PhotoPic, PhotoPrg, PhotoWhere, UserName, UserPic } from '../styles/styles'
+import Edits from './Edit';
+
 
 const Gallery = () => {
 
@@ -9,6 +11,20 @@ const Gallery = () => {
 
     const {fotosNuevas} = useSelector((store)=>store.fotoReducersListar)
     console.log(fotosNuevas);
+
+    const [info, setInfo] = useState([])
+    const [modal, setModal] = useState(false)
+
+    const handleEditar=(foto)=>{
+        setInfo(foto)
+        setModal(true)
+    }
+
+    const handleDelete = (pic)=>{
+        alert('Se eliminará este comentario', pic)
+        dispatch(deleteFotoAsync(pic))
+  
+    }
 
     useEffect(()=>{
         dispatch(listFotosAsync())
@@ -29,7 +45,10 @@ const Gallery = () => {
         <PhotoPrg>{fotos.texto}</PhotoPrg>
         </DivComment>
         <DivDel>
-        <Delete>Borrar</Delete>
+            <div style={{'display':'flex', 'gap':'10px'}}>
+            <Edit onClick={()=>handleEditar(fotos)}>Editar</Edit>
+        <Delete onClick={()=>handleDelete(fotos.pic)}>Borrar</Delete>
+        </div>
         <UserName>{fotos.autor}</UserName>
         </DivDel>
     </PhotoDiv>
@@ -37,6 +56,9 @@ const Gallery = () => {
         ))
     }
     </GalleryDiv>
+    {
+        modal === true ? <Edits info={info}/> : ''
+    }
     </>
   )
 }

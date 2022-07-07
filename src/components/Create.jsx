@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Form } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
+import { Form } from 'react-bootstrap'
+import { useDispatch} from 'react-redux'
 import useCreate from '../Hooks/useCreate'
 import { AddFotoAsync } from '../redux/actions/actionFotos'
 import { CrearText, CrearTitle, FirstPart, FormCrear, SecondDiv, SubmitBtn } from '../styles/styles'

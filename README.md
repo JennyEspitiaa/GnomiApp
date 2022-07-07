@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🌤️​​ Gnomai App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Gnomai app es un aplicativo que permite ver el estado del clima actual por ciudad que el usuario ingrese. Así entonces el usuario será capaz de 
+ver la fecha actual, el clima en °C, sensación térmica, temperatura maxima, temperatura minima, entre otras. También podra ver el pronostico por horas y de los proximos días. 
 
-## Available Scripts
+Además el usuario podrá ingresar sesión por medio de correo y contraseña o autenticación de Gmail, una vez loggeado será capaz de hacer comentarios para publicar en la pagina principal de Gnomai app.
+**
 
-In the project directory, you can run:
+## 📂​ Estructura de carpetas
 
-### `npm start`
+``````
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+├───📁 public/
+│   └───📄 index.html
+|
+├───📁 src/
+│   ├───📁 components/
+│   │   ├───📁
+│   │    └───📄 Create.jsx
+    |     └───📄 Edit.jsx
+    |    └───📄 Footer.jsx
+    |    └───📄 FormBar.jsx
+    |    └───📄 Gallery.jsx
+    |    └───📄 Home.jsx
+    |    └───📄 Login.jsx
+        └───📄 Navbar.jsx
+    |    └───📄 Register.jsx
+    |    └───📄 Weather.jsx
+│   ├───📁 Firebase/
+│   │   └───📄 rifebaseConfig.js
+|
+│   ├───📁 redux/
+         ├───📁 actions
+│   │     └───📄 actionRegister.js
+          |───📄 actionFotos.js
+         ├───📁 reducers
+│   │    └───📄 registerReducers.js
+         └───📄 fotoReducers.js
+         ├───📁 store
+│   │    └───📄 store.js
+         ├───📁 types
+│   │    └───📄 types.js
+│    ├───📁routes
+│   │    └───📄 AppRoutes.jsx
+    |     └───📄Dashboard.jsx
+    |    └───📄 PrivateRoutes.jsx
+    |    └───📄 PublicRoutes.jsx
+│   ├───📁 styles/
+│   │   ├───📄 styles.css
+│   │   └───📄 styles.js
+│   ├───📁 test/
+│   │   └───📄 Apptest.test.js
+│   └───📄 index.js
+├───📄 .gitignore
+├───📄 package-lock.json
+├───📄 package.json
+└───📄 README.md
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+``````
 
-### `npm test`
+## 📚​ Dependencias usadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    1. Puedes clonar el repositorio
+    2. Abre tu terminal y digita "nmp i"
+    3. Digita "npm start"
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    "firebase": "^9.8.4",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.5",
+    "thunk": "^0.0.1",
+    "web-vitals": "^2.1.4"
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌐​ Despliegue del proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Puedes ver el proyecto aquí : https://prueba-tecnica-one.vercel.app/
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻​ Recursos de interes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    React-bootstrap: https://react-bootstrap.netlify.app/
+    API Weather : https://openweathermap.org/api
+    Cloudinary: https://cloudinary.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -16,6 +16,7 @@ const Home = () => {
   const [prediccion, setPrediccion] = useState([])
   const [carga, setCarga] = useState(false)
   const [show, setShow] = useState(false)
+  // eslint-disable-next-line
   const [ubicacion, setUbicacion] = useState("")
 
   const getUbicacion = async(ubi) =>{
@@ -27,6 +28,7 @@ const Home = () => {
     apiWeather = apiWeather + ciudadUrl + ubi;
 
     await fetch(apiWeather).then((resp) => {
+      // eslint-disable-next-line
       if(!resp.ok) throw {resp}
       return resp.json();
       //    parametro
@@ -43,7 +45,9 @@ const Home = () => {
     // predicción
 
     pronosticoUrl = pronosticoUrl + ciudadUrl + ubi;
+    // eslint-disable-next-line
     await fetch(pronosticoUrl).then((resp) => {
+      // eslint-disable-next-line
       if(!resp.ok) throw{resp}
       return resp.json();
       //    parametro

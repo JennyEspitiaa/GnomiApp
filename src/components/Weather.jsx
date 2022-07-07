@@ -17,22 +17,17 @@ const Weather = ({mostrarData,cargarData,weathers,forecasts}) => {
     const dayN = today.getDate();
     const month = monthNames[today.getMonth() + 1];
     const year = today.getFullYear();
-    let url = "";
-    let icon = "";
-
+ 
     if(cargarData){
       return(
         <div style={{'margin':'0 auto', 'display':'flex', 'justifyContent':'center', 'alignItems':'center', 'height':'20vh', 'gap':'20px'}}><Spinner animation="border" variant="primary"/></div>
       )
     }
 
-    if(cargarData){
-        url = 'http://openweathermap.org/img/w/'
-    }
-
+  
     const HandleLocalStorage = () => {
       const local = weathers;
-      localStorage.setItem("ciudad", JSON.stringify(local));
+      localStorage.setItem("city", JSON.stringify(local));
     }
 
   return (
